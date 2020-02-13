@@ -23,18 +23,20 @@
         <div class="row">
             <div class="col-1 bg-dark"></div>
             <div class="col-4 bg-secondary">
-                <form>
+                <form onsubmit="app.giphyController.getGiphyStuff(event)">
                     <div class="form-group">
                         <label for="searchGiphy">
                             <h4 class="text-light">Search Giphy</h4>
                         </label>
                         <input type="text" class="form-control" id="search">
                     </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success col-5">Submit</button>
+                    <button class="col-5 btn btn-success" onclick="app.giphyController.getRandom()">Randomize</button>
                 </form>
-                <div class="row">
+                <!-- <button class="col-5 btn btn-success" onclick="app.giphyController.getRandom()">Random</button> -->
+                <div class="row" id="gif-place">
                     <!-- repeat this div -->
-                    <div class="col-12 text-center m-2">
+                    <div class="col-12 text-center p-2">
                         <div class="card" style="width: 18rem;" onsubmit="">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
@@ -99,8 +101,11 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"
+        integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="app/main.js" type="module"></script>
 </body>
 
