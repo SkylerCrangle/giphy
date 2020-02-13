@@ -31,4 +31,9 @@ export default class GiphyController {
 
   }
 
+  save(title) {
+    GiphyService.saveGif(title)
+    console.log(title)
+  }
+
 }

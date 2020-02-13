@@ -17,9 +17,7 @@ class GiphyService {
 
   }
 
-  saveGif() {
 
-  }
 
   getRandom() {
     _api.get("random?api_key=0HXQDgonECHtcd2pUYA7an0niiyVq4az").then(res => {
@@ -50,7 +48,27 @@ class GiphyService {
       });
   }
 
+  saveGif(title) {
+    // let thisGif = store.State.dataGifs.find(g => g.title == title)
+    // _sandbox.post(thisGif)
+    //   .then(store.commit("myGifs", thisGif));
+    // console.log(store.State.myGifs)
+    console.log(title)
+  }
 
+
+  // addToPlaylist() {
+  //   _sandboxApi
+  //     .post("", store.State.activeSong)
+  //     .then(res => {
+  //       let activeSong = new Song(res.data.data);
+  //       let mySongs = [...store.State.mySongs, activeSong];
+  //       store.commit("mySongs", mySongs);
+  //     })
+  //     .catch(err => {
+  //       throw new Error(err);
+  //     });
+  // }
 
 }
 
